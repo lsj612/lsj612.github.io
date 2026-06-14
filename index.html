@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,113 +9,162 @@
 </head>
 <body>
 
-  <!-- Top Navigation: wordmark | centered links | spacer -->
+  <!-- Top Navigation -->
+
   <header>
     <div class="nav-inner">
       <a href="#about" class="nav-wordmark">lsj612</a>
-      <nav>
-        <ul>
-          <li><a href="#about"    data-section="about">About</a></li>
-          <li><a href="#projects" data-section="projects">Projects</a></li>
-          <li><a href="#cv"       data-section="cv">CV</a></li>
-          <li><a href="#courses"  data-section="courses">Courses</a></li>
-          <li><a href="#ai-usage" data-section="ai-usage">AI Usage</a></li>
-          <li><a href="#contact"  data-section="contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-spacer"></div>
-    </div>
+
+```
+  <nav>
+    <ul>
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#projects" data-section="projects">Projects</a></li>
+      <li><a href="#cv" data-section="cv">CV</a></li>
+      <li><a href="#courses" data-section="courses">Courses</a></li>
+      <li><a href="#ai-usage" data-section="ai-usage">AI Usage</a></li>
+      <li><a href="#contact" data-section="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-spacer"></div>
+</div>
+```
+
   </header>
 
   <main>
 
-    <!-- About / Hero -->
-    <section id="about" class="hero">
-      <div class="hero-inner">
-        <img src="assets/profile.jpg" alt="Profile photo" class="profile-photo" />
-        <div class="hero-text">
-          <h1>SeungJoo Lee</h1>
-          <p class="tagline">B.S. in Computer Science &amp; Engineering · Seoul National University</p>
-          <p class="bio">
-            I am a computer science and engineering student interested in programming, digital logic design, web development, and problem solving.
-          </p>
-        </div>
+```
+<!-- About / Hero -->
+<section id="about" class="hero">
+  <div class="hero-inner">
+    <img src="assets/profile.jpg" alt="Profile photo of SeungJoo Lee" class="profile-photo" />
+
+    <div class="hero-text">
+      <h1>SeungJoo Lee</h1>
+      <p class="tagline">Computer Science &amp; Engineering Student · Seoul National University</p>
+      <p class="bio">
+        I am a computer science and engineering student interested in programming,
+        digital logic design, web development, and problem solving. I enjoy learning
+        how software and hardware systems work together to solve real-world problems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Mini Microprocessor</h3>
+        <span class="project-tag">Logic Design</span>
       </div>
-    </section>
+      <p class="project-desc">
+        Designed and implemented a mini microprocessor as part of a logic design course.
+        The project included arithmetic logic units, register files, control units, and
+        data paths, connecting digital logic theory with practical CPU architecture.
+      </p>
+    </div>
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <h2>Projects</h2>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Mini Microprocessor</h3>
-            <span class="project-tag">Logic Design</span>
-          </div>
-          <p class="project-desc">Designed and implemented a mini microprocessor from the ground up as part of a logic design course. The project covered arithmetic logic units, register files, control units, and data paths — bridging the gap between digital logic theory and practical CPU architecture.</p>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>OOP Hidden Extra Challenge</h3>
-            <span class="project-tag">Computer Programming</span>
-          </div>
-          <p class="project-desc">Tackled a hidden extra-credit challenge in the computer programming course, applying Object-Oriented Programming principles to model and solve a real-life problem. Focused on clean class design, encapsulation, and maintainable code structure.</p>
-        </div>
-
+    <div class="project-card">
+      <div class="project-header">
+        <h3>OOP Hidden Extra Challenge</h3>
+        <span class="project-tag">Computer Programming</span>
       </div>
-    </section>
+      <p class="project-desc">
+        Solved an extra-credit challenge in a computer programming course by applying
+        object-oriented programming principles. The project focused on class design,
+        encapsulation, inheritance, and maintainable code structure.
+      </p>
+    </div>
 
-    <!-- CV -->
-    <section id="cv">
-      <div class="container">
-        <h2>CV / Résumé</h2>
-        <p>You can download my full curriculum vitae as a PDF below.</p>
-        <a href="assets/cv.pdf" class="btn" target="_blank" rel="noopener">Download CV (PDF)</a>
-      </div>
-    </section>
+  </div>
+</section>
 
-    <!-- Courses I Plan to Take -->
-    <section id="courses">
-      <div class="container">
-        <h2>Courses I Plan to Take</h2>
-        <ul class="course-list">
-          <li class="course-item">Data Structures</li>
-          <li class="course-item">Computer Architecture</li>
-          <li class="course-item">Algorithms</li>
-          <li class="course-item">Operating Systems</li>
-        </ul>
-      </div>
-    </section>
+<!-- CV / Resume -->
+<section id="cv">
+  <div class="container">
+    <h2>CV / Résumé</h2>
 
-    <!-- AI Usage -->
-    <section id="ai-usage">
-      <div class="container">
-        <h2>AI Usage</h2>
-        <div class="ai-entry">
-          <p class="ai-label">Tool</p>
-          <p class="ai-value">Replit Agent</p>
-        </div>
-        <div class="ai-entry">
-          <p class="ai-label">Prompt</p>
-          <p class="ai-value">Build a static personal website in the repo root with About Me, CV, Projects, Contact, Courses, and AI Usage sections. Keep the site compatible with GitHub Pages.</p>
-        </div>
-      </div>
-    </section>
+    <div class="cv-card">
+      <h3>Education</h3>
+      <p>Seoul National University</p>
+      <p>B.S. in Computer Science &amp; Engineering</p>
+    </div>
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:lsj612@snu.ac.kr">lsj612@snu.ac.kr</a></p>
-        <p><a href="https://github.com/lsj612" target="_blank" rel="noopener">https://github.com/lsj612</a></p>
-      </div>
-    </section>
+    <div class="cv-card">
+      <h3>Skills</h3>
+      <ul>
+        <li>Programming: C++, Java, Python</li>
+        <li>Web: HTML, CSS, GitHub Pages</li>
+        <li>Hardware / Logic Design: Verilog, digital logic circuits, CPU datapath basics</li>
+        <li>Tools: GitHub, Replit, VS Code</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Experience</h3>
+      <ul>
+        <li>Implemented digital logic and Verilog-based course projects.</li>
+        <li>Designed object-oriented programs using classes, encapsulation, and inheritance.</li>
+        <li>Created and deployed a personal website using GitHub Pages.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Courses I Plan to Take -->
+<section id="courses">
+  <div class="container">
+    <h2>Courses I Plan to Take</h2>
+    <ul class="course-list">
+      <li class="course-item">Data Structures</li>
+      <li class="course-item">Computer Architecture</li>
+      <li class="course-item">Algorithms</li>
+      <li class="course-item">Operating Systems</li>
+    </ul>
+  </div>
+</section>
+
+<!-- AI Usage -->
+<section id="ai-usage">
+  <div class="container">
+    <h2>AI Usage</h2>
+
+    <div class="ai-entry">
+      <p class="ai-label">Tool</p>
+      <p class="ai-value">Replit Agent and ChatGPT</p>
+    </div>
+
+    <div class="ai-entry">
+      <p class="ai-label">Prompt</p>
+      <p class="ai-value">
+        Build a static personal website in the repo root with About Me, CV,
+        Projects, Contact, Courses, and AI Usage sections. Keep the site
+        compatible with GitHub Pages.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:lsj612@snu.ac.kr">lsj612@snu.ac.kr</a></p>
+    <p>GitHub: <a href="https://github.com/lsj612" target="_blank" rel="noopener">https://github.com/lsj612</a></p>
+  </div>
+</section>
+```
 
   </main>
 
-  <!-- Footer: footer-light body + legal-band -->
+  <!-- Footer -->
+
   <footer>
     <div class="footer-body">
       <div class="footer-col">
@@ -126,25 +176,32 @@
         <a href="#ai-usage">AI Usage</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="footer-col">
-        <h4>Profiles</h4>
-        <a href="https://github.com/lsj612" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <p>&copy; 2026 SeungJoo Lee</p>
-      <div class="footer-legal-links">
-        <a href="https://github.com/lsj612" target="_blank" rel="noopener">GitHub</a>
-        <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
-      </div>
-    </div>
+
+```
+  <div class="footer-col">
+    <h4>Profiles</h4>
+    <a href="https://github.com/lsj612" target="_blank" rel="noopener">GitHub</a>
+  </div>
+
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <a href="mailto:lsj612@snu.ac.kr">lsj612@snu.ac.kr</a>
+  </div>
+</div>
+
+<div class="footer-legal">
+  <p>&copy; 2026 SeungJoo Lee</p>
+  <div class="footer-legal-links">
+    <a href="https://github.com/lsj612" target="_blank" rel="noopener">GitHub</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+```
+
   </footer>
 
-  <!-- Scroll-spy: active nav underline (product-tab-active) -->
+  <!-- Scroll-spy: active navigation underline -->
+
   <script>
     const sections = document.querySelectorAll('main section[id]');
     const navLinks = document.querySelectorAll('nav a[data-section]');
@@ -152,9 +209,13 @@
     function setActive() {
       const scrollY = window.scrollY + 100;
       let current = sections[0].id;
+
       sections.forEach(section => {
-        if (section.offsetTop <= scrollY) current = section.id;
+        if (section.offsetTop <= scrollY) {
+          current = section.id;
+        }
       });
+
       navLinks.forEach(link => {
         link.classList.toggle('active', link.dataset.section === current);
       });
