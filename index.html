@@ -1,1 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeungJoo Lee</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation: wordmark | centered links | spacer -->
+  <header>
+    <div class="nav-inner">
+      <a href="#about" class="nav-wordmark">lsj612</a>
+      <nav>
+        <ul>
+          <li><a href="#about"    data-section="about">About</a></li>
+          <li><a href="#research" data-section="research">Research</a></li>
+          <li><a href="#cv"       data-section="cv">CV</a></li>
+          <li><a href="#courses"  data-section="courses">Courses</a></li>
+          <li><a href="#ai-usage" data-section="ai-usage">AI Usage</a></li>
+          <li><a href="#contact"  data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-spacer"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- About / Hero -->
+    <section id="about" class="hero">
+      <div class="hero-inner">
+        <img src="assets/profile.jpg" alt="Profile photo" class="profile-photo" />
+        <div class="hero-text">
+          <h1>SeungJoo Lee</h1>
+          <p class="tagline">Bachelor's Degree Student · Seoul National University</p>
+          <p class="bio">
+            I am interested in programming, digital logic design, web development, and problem solving.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <div class="container">
+        <h2>Research</h2>
+
+        <div class="paper">
+          <h3>Paper Title One</h3>
+          <p class="authors"><strong>SeungJoo Lee</strong>, Co-author One, Co-author Two</p>
+          <p class="venue"><em>Conference / Journal Name, Year</em></p>
+          <p class="abstract">Brief description of the paper and its contributions to the field.</p>
+          <div class="links">
+            <a href="#">Paper</a>
+            <a href="#">Code</a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <h3>Paper Title Two</h3>
+          <p class="authors"><strong>SeungJoo Lee</strong>, Co-author One</p>
+          <p class="venue"><em>Conference / Journal Name, Year</em></p>
+          <p class="abstract">Brief description of the paper and its contributions to the field.</p>
+          <div class="links">
+            <a href="#">Paper</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <div class="container">
+        <h2>CV / Résumé</h2>
+        <p>You can download my full curriculum vitae as a PDF below.</p>
+        <a href="assets/cv.pdf" class="btn" target="_blank" rel="noopener">Download CV (PDF)</a>
+      </div>
+    </section>
+
+    <!-- Courses I Plan to Take -->
+    <section id="courses">
+      <div class="container">
+        <h2>Courses I Plan to Take</h2>
+        <ul class="course-list">
+          <li class="course-item">Data Structures</li>
+          <li class="course-item">Computer Architecture</li>
+          <li class="course-item">Algorithms</li>
+          <li class="course-item">Operating Systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AI Usage -->
+    <section id="ai-usage">
+      <div class="container">
+        <h2>AI Usage</h2>
+        <div class="ai-entry">
+          <p class="ai-label">Tool</p>
+          <p class="ai-value">Replit Agent</p>
+        </div>
+        <div class="ai-entry">
+          <p class="ai-label">Prompt</p>
+          <p class="ai-value">Build a static personal website in the repo root with About Me, CV, Projects, Contact, Courses, and AI Usage sections. Keep the site compatible with GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:lsj612@snu.ac.kr">lsj612@snu.ac.kr</a></p>
+        <p><a href="https://github.com/lsj612" target="_blank" rel="noopener">https://github.com/lsj612</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: footer-light body + legal-band -->
+  <footer>
+    <div class="footer-body">
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#cv">CV</a>
+        <a href="#courses">Courses</a>
+        <a href="#ai-usage">AI Usage</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Profiles</h4>
+        <a href="https://github.com/lsj612" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2026 SeungJoo Lee</p>
+      <div class="footer-legal-links">
+        <a href="https://github.com/lsj612" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-spy: active nav underline (product-tab-active) -->
+  <script>
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('nav a[data-section]');
+
+    function setActive() {
+      const scrollY = window.scrollY + 100;
+      let current = sections[0].id;
+      sections.forEach(section => {
+        if (section.offsetTop <= scrollY) current = section.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === current);
+      });
+    }
+
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+  </script>
+
+</body>
+</html>
 
